@@ -1,9 +1,10 @@
 #include <iostream>
-#include <SFML/Graphics.hpp>
-#include <AnimatedSprite.h>
-#include <Player.h>
-#include <Input.h>
-#include <Debug.h>
+//#include <SFML/Graphics.hpp>
+//#include <AnimatedSprite.h>
+//#include <Player.h>
+//#include <Input.h>
+//#include <Debug.h>
+#include <Animation.h>
 
 using namespace std;
 
@@ -37,10 +38,14 @@ int main()
 	fsm.swordsmanship();
 	fsm.idle();
 
+	// can't go from climbing, swording, jumping to shoveling. shoveling is restricted to grounded movement. so idle and walking allowed
+	// must sheath sword/hammer to bring out shovel(so move to idle if we pretend sheathing is included in the swording ani)
 	fsm.shoveling();
 	fsm.walking();
 	fsm.shoveling();
 	fsm.idle();
+
+
 	
 
 	system("pause");
