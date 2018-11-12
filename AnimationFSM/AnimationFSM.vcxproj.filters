@@ -45,9 +45,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AnimatedSprite.h">
-      <Filter>Header Files\Animation</Filter>
-    </ClInclude>
     <ClInclude Include="Climbing.h">
       <Filter>Header Files\FSM</Filter>
     </ClInclude>
@@ -81,8 +78,8 @@
     <ClInclude Include="Shoveling.h">
       <Filter>Header Files\FSM</Filter>
     </ClInclude>
-    <ClInclude Include="Hammering.h">
-      <Filter>Source Files\FSM</Filter>
+    <ClInclude Include="AnimatedSprite.h">
+      <Filter>Header Files\Animation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -117,9 +114,6 @@
       <Filter>Source Files\FSM</Filter>
     </ClCompile>
     <ClCompile Include="Shoveling.cpp">
-      <Filter>Source Files\FSM</Filter>
-    </ClCompile>
-    <ClCompile Include="Hammering.cpp">
       <Filter>Source Files\FSM</Filter>
     </ClCompile>
   </ItemGroup>

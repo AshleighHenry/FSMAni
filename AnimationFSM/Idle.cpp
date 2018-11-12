@@ -3,6 +3,7 @@
 #include <Climbing.h>
 #include <Walking.h>
 #include <Swordsmanship.h>
+#include <Shoveling.h>
 #include <string>
 
 void Idle::handleInput() {}
@@ -34,4 +35,12 @@ void Idle::swordsmanship(Animation * a)
 	a->setCurrent(new Swordsmanship());
 	delete this;
 }
+
+void Idle::shoveling(Animation * a)
+{
+	std::cout << "Idle -> Shoveling" << std::endl;
+	a->setCurrent(new Shoveling());
+	delete this;
+}
+
 

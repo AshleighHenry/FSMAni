@@ -15,12 +15,6 @@ void Walking::idle(Animation * a)
 	delete this;
 }
 
-void Walking::walking(Animation * a)
-{
-	std::cout << "Walking -> Walking" << std::endl;
-	a->setCurrent(new Walking());
-	delete this;
-}
 
 void Walking::jumping(Animation * a)
 {

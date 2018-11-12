@@ -20,7 +20,7 @@ public:
 	int getCurrent();
 	void keyPressEvent(sf::Event event);
 private:
-	int m_current;
-	int m_previous;
+	int m_current = 0;
+	int m_previous = 0;
 };
 #endif

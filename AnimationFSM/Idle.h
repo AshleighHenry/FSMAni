@@ -14,6 +14,7 @@ public:
 	void climbing(Animation* a);
 	void walking(Animation* a);
 	void swordsmanship(Animation * a);
+	void shoveling(Animation * a);
 };
 
 #endif // !IDLE_H

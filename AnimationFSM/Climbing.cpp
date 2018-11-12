@@ -12,12 +12,6 @@ void Climbing::idle(Animation* a)
 	delete this;
 }
 
-void Climbing::climbing(Animation* a)
-{
-	std::cout << "Climbing -> Climbing" << std::endl;
-	a->setCurrent(new Climbing());
-	delete this;
-}
 
 void Climbing::jumping(Animation* a)
 {

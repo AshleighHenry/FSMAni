@@ -31,21 +31,19 @@ void Player::handleInput(Input in)
 	switch (in.getCurrent())
 	{
 	case 0:
-		//std::cout << "Player Idling" << std::endl;
-		m_animation.idle();
+		m_animation.idle();		
 		break;
 	case 1:
-		//std::cout << "Player Up" << std::endl;
-		//m_animation.hammering();
+		m_animation.shoveling();
+		m_animated_sprite.setStartAndEnd(13, 19);
 		break;
 	case 2:
-		//std::cout << "Player Left" << std::endl;
-		m_animation.walking();
-		// I FORGOT THE HAMMERING FILE NOW I KNOW WHY I DID SO BAD OH MY GOD 
+		m_animation.walking();	
+		m_animated_sprite.setStartAndEnd(33, 39);
 		break;
-	case 3:
-		//std::cout << "Player Idling" << std::endl;
+	case 3:		
 		m_animation.climbing();
+		m_animated_sprite.setStartAndEnd(19, 25);
 		break;
 	case 4:
 		m_animation.jumping();
@@ -55,6 +53,7 @@ void Player::handleInput(Input in)
 		break;
 	case 6:
 		m_animation.shoveling();
+		break;
 	default:
 		m_animation.idle();
 		break;

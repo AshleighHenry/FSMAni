@@ -39,14 +39,21 @@ const int AnimatedSprite::getCurrentFrame() {
 
 void AnimatedSprite::update(){
 	if (m_clock.getElapsedTime() > m_time) {
-		if (m_frames.size() > m_current_frame + 1)
+		if (m_endFrame> m_current_frame + 1)
 		{
 			m_current_frame++;
 		}
 		else {
-			m_current_frame = 0;
+			m_current_frame = m_startFrame;
 		}
 		m_clock.restart();
 	}
+}
+
+void AnimatedSprite::setStartAndEnd(int t_start, int t_end)
+{
+	m_startFrame = t_start;
+	m_current_frame = t_start;
+	m_endFrame = t_end;
 }
 
