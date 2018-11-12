@@ -1,23 +1,26 @@
 #ifndef INPUT_H
 #define INPUT_H
+#include <SFML\Graphics.hpp>
 class Input
 {
 public:
 	Input();
 	~Input();
 
-	enum Action
-	{
-		IDLE,
-		UP,
-		LEFT,
-		RIGHT
-	};
+	//enum Action
+	//{
+	//	IDLE,
+	//	UP,
+	//	LEFT,
+	//	RIGHT
+	//};
+	int Action = 0;
 
-	void setCurrent(Action);
-	Action getCurrent();
-
+	void setCurrent(int Action);
+	int getCurrent();
+	void keyPressEvent(sf::Event event);
 private:
-	Action m_current;
+	int m_current;
+	int m_previous;
 };
 #endif

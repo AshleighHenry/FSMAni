@@ -30,23 +30,33 @@ void Player::handleInput(Input in)
 
 	switch (in.getCurrent())
 	{
-	case Input::Action::IDLE:
+	case 0:
 		//std::cout << "Player Idling" << std::endl;
 		m_animation.idle();
 		break;
-	case Input::Action::UP:
+	case 1:
 		//std::cout << "Player Up" << std::endl;
+		//m_animation.hammering();
+		break;
+	case 2:
+		//std::cout << "Player Left" << std::endl;
+		m_animation.walking();
+		// I FORGOT THE HAMMERING FILE NOW I KNOW WHY I DID SO BAD OH MY GOD 
+		break;
+	case 3:
+		//std::cout << "Player Idling" << std::endl;
 		m_animation.climbing();
 		break;
-	case Input::Action::LEFT:
-		//std::cout << "Player Left" << std::endl;
+	case 4:
 		m_animation.jumping();
 		break;
-	case Input::Action::RIGHT:
-		//std::cout << "Player Idling" << std::endl;
-		m_animation.jumping();
+	case 5:
+		m_animation.swordsmanship();
 		break;
+	case 6:
+		m_animation.shoveling();
 	default:
+		m_animation.idle();
 		break;
 	}
 }
